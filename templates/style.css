@@ -73,7 +73,7 @@ p {
 	line-height: 1.5em;
 }
 
-h1, h2, h3 {
+h1, h2, h3, label, input {
 	/* Typography */
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 200;
@@ -85,4 +85,19 @@ h1 {
 
 	/* Typography */
 	font-size: 3em;
+}
+
+input[type=text], input[type=submit], input[type=password] {
+	/* Box model */
+	display: block;
+	margin: 0 0 1em 0;
+
+	/* Typography */
+	font-size: 1em;
+}
+
+label {
+	/* Box model */
+	display: block;
+	margin: 0 0 0.25em 0;
 }
