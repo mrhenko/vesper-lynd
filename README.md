@@ -7,7 +7,7 @@ The app is __not__ meant to be a web service for everyone. Each user is supposed
 
 Dogma
 -----
-Appart from scratching my own itch, *Vesper Lynd* is also created as a programming exercise for me so I keep up my game in certain areas and learn a few new thing. To achive this the project has the following goals.
+Apart from scratching my own itch, *Vesper Lynd* is also created as a programming exercise for me so I keep up my game in certain areas and learn a few new thing. To achive this the project has the following goals.
 
 * The backend should be written in PHP and make use of Unit Testing.
 * The database part of the backend should be built using PostgreSQL.
