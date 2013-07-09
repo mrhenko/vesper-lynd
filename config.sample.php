@@ -14,5 +14,5 @@
 	DEFINE ( 'DB_HOST', 'localhost' );
 
 	// Templates
-	DEFINE ( 'TEMPLATE_PATH', 'templates/'); // Relative to app root.
+	DEFINE ( 'TEMPLATE_PATH', 'templates/' ); // Relative to app root.
 ?>
