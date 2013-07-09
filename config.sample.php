@@ -6,6 +6,9 @@
 	  *
 	 **/
 
+	if (!DEFINED ( 'ABSPATH' ) ) {
+		DEFINE ( 'ABSPATH', dirname(__FILE__) . '/' );
+	}
 
 	// The database credentials
 	DEFINE ( 'DB_NAME', 'db_name' );

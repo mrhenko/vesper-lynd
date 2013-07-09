@@ -18,9 +18,7 @@
 		  * Load the default template
 		 **/
 		private function loadTemplate() {
-			$filename = TEMPLATE_PATH . 'index.htm';
-			$fh = fopen ( $filename, 'r');
-			$this->template = fread ( $fh, filesize($filename) );
+			$this->template = require ( TEMPLATE_PATH . 'index.php');
 		}
 
 		/**
