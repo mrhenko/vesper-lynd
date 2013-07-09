@@ -13,4 +13,6 @@
 	DEFINE ( 'DB_PASSWORD', 'db_password' );
 	DEFINE ( 'DB_HOST', 'localhost' );
 
+	// Templates
+	DEFINE ( 'TEMPLATE_PATH', 'templates/'); // Relative to app root.
 ?>
