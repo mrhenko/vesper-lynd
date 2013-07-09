@@ -11,7 +11,7 @@
 	//print_r ( $view->setById('main-header' , 'test') );
 
 	$view->setById ( 'main-header', 'rubrik' );
-	$view->setById ( 'body-text', 'TTTTTTEEEEEESssssT' );
+	//$view->setById ( 'body-text', 'TTTTTTEEEEEESssssT' );
 	echo $view->getHTML();
 
 ?>

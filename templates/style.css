@@ -59,7 +59,7 @@ body {
 	box-sizing: border-box;
 
 	/* Typography */
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Georgia, serif;
 	font-size: 16px;
 	font-weight: 400;
 }
@@ -75,6 +75,7 @@ p {
 
 h1, h2, h3 {
 	/* Typography */
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 200;
 }
 
