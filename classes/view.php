@@ -36,6 +36,38 @@
 			$this->template = $dom->saveHTML();
 		}
 
+		/**
+		  * Add a child node to an element based
+		  * on the parents id.
+		  *
+		  * The child can have some optional parameters.
+		  * 
+		  * $childNode (required), $childValue (optional), $childId (optional), $childAttributes' (array, optional)
+		  *
+		  * ' $childAttributes is declared as:
+		  * array(
+		  *		'attribute' => 'value',
+		  *		etc.
+		  * )
+		  *
+		 **/
+		public function addChildToId($id, $childNode, $childValue = NULL, $childId = NULL, $childAttributes = NULL) {
+		
+			$dom = new DOMDocument();
+			$dom->loadHTML ( $this->template );
+
+			$newElement = $dom->createElement ( $childNode );
+
+			if (isset($childValue))
+				$newElement->nodeValue = $childValue;
+
+			$parent = $dom->getElementById ( $id );
+			$parent->appendChild ( $newElement );
+
+			$this->template = $dom->saveHTML();
+
+		}
+
 		public function getHTML() {
 			return $this->template;
 		}

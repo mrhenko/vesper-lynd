@@ -11,8 +11,10 @@
 	try {
 	
 		$dbh = new PDO( 'pgsql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';user=' . DB_USER . ';password=' . DB_PASSWORD );
+		$dbh->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 
-		$view->setById ( 'body-text', '<p>Databaskoppling korrekt.</p>' );
+		//$view->setById ( 'body-text', '<p>Databaskoppling korrekt.</p>' );
+		$view->addChildToId ( 'body-text', 'p', 'Databaskoppling korrekt.' );
 
 
 	} catch ( PDOException $e ) {
