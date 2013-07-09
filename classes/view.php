@@ -7,13 +7,39 @@
 	 **/
 
 	class View {
+
+		private $template;
 	
-		public function loadTemplate() {
+		function __construct() {
+			$this->loadTemplate();
+		}
+
+		/**
+		  * Load the default template
+		 **/
+		private function loadTemplate() {
 			$filename = TEMPLATE_PATH . 'index.htm';
 			$fh = fopen ( $filename, 'r');
-			$basehtml = fread ( $fh, filesize($filename) );
+			$this->template = fread ( $fh, filesize($filename) );
+		}
 
-			return $basehtml;
+		/**
+		  * Specify an HTML element by $id and set
+		  * a new content to it.
+		 **/
+		public function setById($id, $content) {
+		
+			$dom = new DOMDocument();
+			$dom->loadHTML ( $this->template );
+			
+			$element = $dom->getElementById ( $id );
+			$element->nodeValue = $content;
+
+			$this->template = $dom->saveHTML();
+		}
+
+		public function getHTML() {
+			return $this->template;
 		}
 
 	}
