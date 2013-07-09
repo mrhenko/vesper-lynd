@@ -3,7 +3,7 @@
 		DEFINE ( 'ABSPATH', dirname(__FILE__) . '/' );
 	}
 
-	require_once ( ABSPATH . 'config.sample.php' );	
+	require_once ( ABSPATH . 'config.php' );	
 
 	$html = '<!DOCTYPE html>
 
@@ -12,7 +12,7 @@
 	<head>
 		<meta charset="utf-8" />
 
-		<link rel="stylesheet" href="' . ABSPATH . TEMPLATE_PATH . 'style.css" type="text/css" />
+		<link rel="stylesheet" href="' . $_SERVER['HTTP_REFERER'] . TEMPLATE_PATH . 'style.css" type="text/css" />
 
 		<title> Placeholder title </title>
 	</head>
