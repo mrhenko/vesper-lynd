@@ -8,8 +8,9 @@
 
 
 	// The database credentials
-	DEFINE ( 'db_name', 'db_name' );
-	DEFINE ( 'db_user', 'db_user' );
-	DEFINE ( 'db_password', 'db_password' );
-	DEFINE ( 'db_host', 'localhost' );
+	DEFINE ( 'DB_NAME', 'db_name' );
+	DEFINE ( 'DB_USER', 'db_user' );
+	DEFINE ( 'DB_PASSWORD', 'db_password' );
+	DEFINE ( 'DB_HOST', 'localhost' );
+
 ?>
