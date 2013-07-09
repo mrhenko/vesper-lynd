@@ -5,13 +5,22 @@
 
 	$view = new View();
 
-	//print_r ( $view->getTemplate() );
+	$view->setById ( 'main-header', 'Installation' );
+
+	// Try to connect to the Postgres database
+	try {
+	
+		$dbh = new PDO( 'pgsql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';user=' . DB_USER . ';password=' . DB_PASSWORD );
+
+		$view->setById ( 'body-text', '<p>Databaskoppling korrekt.</p>' );
 
 
-	//print_r ( $view->setById('main-header' , 'test') );
+	} catch ( PDOException $e ) {
 
-	$view->setById ( 'main-header', 'rubrik' );
-	//$view->setById ( 'body-text', 'TTTTTTEEEEEESssssT' );
+		$view->setById ( 'body-text', '<p>Databaskopplingen misslyckades.</p>' );
+
+	}
+	
 	echo $view->getHTML();
 
 ?>
